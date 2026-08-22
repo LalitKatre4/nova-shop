@@ -20,11 +20,16 @@ export function AiAssistant() {
   const submit = async (q: string) => {
     if (q.trim().length < 3) return;
 
+<<<<<<< HEAD
     const configuredApiUrl = import.meta.env.VITE_AI_API_URL;
     if (!configuredApiUrl) {
       setError("AI service is not configured yet. Please add VITE_AI_API_URL.");
       return;
     }
+=======
+    const configuredApiUrl =
+      import.meta.env.VITE_AI_API_URL || "https://novashop-gemini.novashop-ai.workers.dev";
+>>>>>>> 66b4a37 (Fix Gemini AI connection)
 
     const apiUrl = `${configuredApiUrl.replace(/\/$/, "")}/recommend`;
 
