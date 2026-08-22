@@ -37,7 +37,7 @@ jobs:
         env:
           VITE_APP_BASE_URL: /nova-shop/
 
-        VITE_AI_API_URL: https://novashop-gemini.novashop-ai.workers.dev
+          VITE_AI_API_URL: https://novashop-gemini.novashop-ai.workers.dev
         run: bun run build
 
       - name: Find build output
